@@ -28,3 +28,5 @@ private
 def cocktail_params
   params.require(:cocktail).permit(:name, :photo)
 end
+
+# heroku config:set CLOUDINARY_URL=cloudinary://536429668474783:GCgrxtjSCMgz6VON0eeG_EpxdfI@dqqpqlyes

@@ -8,6 +8,11 @@
   <% @cocktail.doses.each do |dose| %>
   <p><%= dose.description %> <%= dose.ingredient.name %> <%= link_to '🗑', dose_path(dose), method: :delete %></p>
   <% end %>
+  <h2>Reviews</h2>
+  <% @cocktail.reviews.each do |review| %>
+  <p><%= review.content %> - <%= review.rating %>/5 </p>
+  <% end %>
   <%= link_to 'Add an ingredient', new_cocktail_dose_path(@cocktail) %>
   <%= link_to 'Back to cocktails', cocktails_path %>
+  <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
 </div>
