@@ -1,5 +1,7 @@
 <div class="container mt-5">
   <h1>Cocktails</h1>
+  <%= cl_image_tag("beh5gfxjcz937uw6pkxh",
+      width: 400, height: 300, crop: :fill) %>
   <ul>
     <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name, cocktail %> </li>
